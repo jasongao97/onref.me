@@ -35,9 +35,10 @@ export default {
 <style scoped>
 h1 {
   font-size: 46px;
-  line-height: 20px;
+  line-height: 10px;
 }
 h2 {
+  line-height: 10px;
   font-size: 20px;
   font-weight: 300;
   font-family: 'Roboto'
