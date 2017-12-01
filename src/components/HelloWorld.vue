@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>On Reflection</h1>
-    <h2 @click="changeMsg">A project made by {{ msg }}</h2>
+    <h1 class="title">On Reflection</h1>
+    <h2 class="subTitle" @click="changeMsg">A project made by {{ msg }}</h2>
     <canvas id="gradientBlock" width="320" height="320"></canvas>
     <ul>
       <li><a href="https://www.instagram.com/gosgjkaj_official/" target="_blank">@gosgjkaj_offical</a></li>
@@ -33,18 +33,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-size: 46px;
-  line-height: 10px;
+h1, h2 {
+  margin: 0;
+  padding: 0;
 }
-h2 {
-  line-height: 10px;
+.title {
+  font-size: 46px;
+}
+.subTitle {
+  margin-top: 10px;
   font-size: 20px;
   font-weight: 300;
-  font-family: 'Roboto'
 }
 canvas {
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: #333;
 }
 ul {
@@ -56,13 +58,7 @@ li {
   margin-bottom: 10px;
 }
 a {
-  font-family: 'Roboto';
   color: #888;
   font-size: 16px;
-}
-.hello {
-  width: 320px;
-  display: flex;
-  flex-direction: column;
 }
 </style>

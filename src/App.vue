@@ -12,12 +12,12 @@ export default {
 
 <style>
 #app {
-  font-family: 'roboto condensed', Helvetica, Arial, sans-serif;
+  font-family: 'Europa', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
   color: #2c3e50;
-  margin: 60px;
+  margin: 40px;
 }
 </style>
