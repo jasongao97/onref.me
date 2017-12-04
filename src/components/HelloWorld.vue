@@ -10,8 +10,10 @@
       </span>
     </h2>
     <!-- <canvas id="gradientBlock" width="320" height="320"></canvas> -->
-    <img width="320" height="320" v-for="image in images" :key="image.id" :src="image.src + 
+    <div class="imagesBlock" id="wrapper">
+      <img v-for="image in images" :key="image.id" :src="image.src + 
     '?imageView2/1/w/600/h/600/q/75|imageslim'"/>
+    </div>
   </div>
 </template>
 
@@ -77,5 +79,14 @@ a {
 
 img {
   margin-top: 40px;
+  margin-right: 40px;
+  width: 80%;
+  height: 80%;
+}
+
+.imagesBlock {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
 }
 </style>
