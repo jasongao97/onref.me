@@ -53,7 +53,7 @@ h1, h2 {
 }
 
 .title {
-  font-size: 50px;
+  font-size: 46px;
 }
 
 .subTitle {
@@ -80,8 +80,8 @@ a {
 img {
   margin-top: 40px;
   margin-right: 40px;
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 .imagesBlock {

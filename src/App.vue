@@ -18,6 +18,6 @@ export default {
   display: flex;
   justify-content: center;
   color: #2c3e50;
-  margin: 50px;
+  margin: 40px;
 }
 </style>
