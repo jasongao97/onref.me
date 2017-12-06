@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    <!-- <canvas id="gradientBlock" width="320" height="320"></canvas> -->
     <div class="imagesBlock hidden-xs-only" id="wrapper">
       <img v-for="image in images" :key="image.id" :src="image.src + 
     '?imageView2/1/w/600/h/600/q/75|imageslim'"/>
