@@ -24,7 +24,7 @@ export default {
 
 @media (max-width: 767px) { 
   #app {
-    margin: 40px;
+    margin: 30px;
   }
 }
 

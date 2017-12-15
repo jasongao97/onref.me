@@ -38,9 +38,24 @@ export default {
 
 <style scoped>
 /* 不同宽度显示不同 */
+@media (max-width: 768px) { 
+  .title {
+    font-size: 24pt;
+  }
+  .subTitle {
+    font-size: 11pt;
+  }
+}
+
 @media (min-width: 768px) { 
   .header {
     position: fixed;
+  }
+  .title {
+    font-size: 28pt;
+  }
+  .subTitle {
+    font-size: 12pt;
   }
 }
 
@@ -64,14 +79,12 @@ h1, h2 {
 }
 
 .title {
-  font-size: 28pt;
   margin-bottom: 6px;
   font-weight: normal;
 }
 
 .subTitle {
   font-family: 'Open Sans', sans-serif;
-  font-size: 12pt;
   font-weight: 300;
   line-height: 32px;
 }
