@@ -14,19 +14,21 @@
     </div>
 
     <div class="headerMore hidden-sm-and-up">
-      <img class="moreButton" src="../assets/button_more.png"/>
+      <img class="moreButton" :src="moreButtonUrl"/>
     </div>
   </div>
 </template>
 
 <script>
 // import { generateGradient } from '../assets/gradient.js'
+import moreButton from './../assets/button_more.png'
 
 export default {
   name: 'HeadView',
   data () {
     return {
-      msg: 'Cornography'
+      msg: 'Cornography',
+      moreButtonUrl: moreButton
     }
   },
   methods: {
