@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="imagesBlock hidden-xs-only" id="wrapper">
+    <div class="imagesBlock" id="wrapper">
       <img v-for="image in images" :key="image.id" :src="image.src + 
     '?imageView2/1/w/600/h/600/q/75|imageslim'"/>
     </div>
@@ -26,27 +26,33 @@ export default {
     changeMsg: function () {
       this.ifShowInfo = true
     }
-  },
-  mounted: function () {
-    // generateGradient()
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media (max-width: 767px) { 
+  .hello {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) { 
+  .hello {
+    margin-left: 300px;
+  }
+}
 
 img {
-  margin-top: 40px;
-  margin-right: 40px;
+  margin-bottom: 40px;
   width: 100%;
   height: 100%;
 }
 
 .imagesBlock {
   display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
+  flex-direction: column;
 }
 
 </style>
