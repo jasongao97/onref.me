@@ -1,37 +1,47 @@
 <template>
-  <div class="header">
-    <div class="headerTitle">
-      <h1 class="title">On Reflection</h1>
-      <h2 class="subTitle">A project made by 
-        <span>{{ msg }}</span>
-      </h2>
-      <div class="navigationBar hidden-xs-only">
-        <h2 class="navigation">Photography</h2>
-        <h2 class="navigation">Documentary</h2>
+  <div class="top">
+    <div class="header">
+      <div class="headerTitle">
+        <router-link to="/"><h1 class="title">On Reflection</h1></router-link>
+        <h2 class="subTitle">A project made by 
+          <span>{{ msg }}</span>
+        </h2>
+      </div>
+
+      <div class="buttonBars hidden-sm-and-up" @click="showNavigationBar">
+        <icon name="bars"></icon>
+      </div>
+    </div>
+    <div class="navigationBar hidden-xs-only">
+      <router-link to="/documentary"><h2 class="navigation">Documentary</h2></router-link>
+      <h2 class="navigation">Information</h2>
+      <h2 class="navigation">About</h2>
+    </div>
+    <transition name="nav">
+      <div v-show="ifShowNav" class="navigationBar hidden-sm-and-up">
+        <router-link to="/documentary"><h2 class="navigation">Documentary</h2></router-link>
         <h2 class="navigation">Information</h2>
         <h2 class="navigation">About</h2>
       </div>
-    </div>
-
-    <div class="headerMore hidden-sm-and-up">
-      <img class="moreButton" :src="moreButtonUrl"/>
-    </div>
+    </transition>
   </div>
 </template>
 
 <script>
 // import { generateGradient } from '../assets/gradient.js'
-import moreButton from './../assets/button_more.png'
 
 export default {
   name: 'HeadView',
   data () {
     return {
       msg: 'Cornography',
-      moreButtonUrl: moreButton
+      ifShowNav: false
     }
   },
   methods: {
+    showNavigationBar: function (event) {
+      this.ifShowNav = !this.ifShowNav
+    }
   }
 }
 </script>
@@ -48,34 +58,41 @@ export default {
 }
 
 @media (min-width: 768px) { 
-  .header {
+  .top {
     position: fixed;
   }
   .title {
-    font-size: 28pt;
+    font-size: 34pt;
   }
   .subTitle {
-    font-size: 12pt;
+    font-size: 14pt;
   }
+}
+/* 动画过渡 */
+.nav-enter-active {
+  transition: opacity .5s;
+}
+
+.nav-leave-active {
+  transition: opacity .3s;
+}
+
+.nav-enter, .nav-leave-to {
+  opacity: 0;
+}
+
+.top {
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
-  width: auto;
-  background-color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-.moreButton {
-  width: 32px;
-  height: 32px;
-}
-
-h1, h2 {
-  margin: 0;
-  padding: 0;
 }
 
 .title {
@@ -93,18 +110,19 @@ h1, h2 {
   text-decoration: underline;
 }
 
+.buttonBars {
+  padding: 8px;
+}
+
 .navigationBar {
   margin-top: 14pt;
 }
 
 .navigation {
   font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   line-height: 38px;
-}
-
-a {
-  color: #555;
 }
 
 </style>

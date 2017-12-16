@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
-    <div class="imagesBlock" id="wrapper">
-      <img v-for="image in images" :key="image.id" :src="image.src + 
-    '?imageView2/1/w/600/h/600/q/75|imageslim'"/>
-    </div>
+    <h1>Documentary</h1>
   </div>
 </template>
 
@@ -11,7 +8,7 @@
 // import { generateGradient } from '../assets/gradient.js'
 
 export default {
-  name: 'HelloWorld',
+  name: 'Documentary',
   data () {
     return {
       images: [
@@ -34,13 +31,14 @@ export default {
 <style scoped>
 @media (max-width: 767px) { 
   .hello {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
 @media (min-width: 768px) { 
   .hello {
-    margin-left: 300px;
+    margin-top: 10px;
+    margin-left: 340px;
   }
 }
 
