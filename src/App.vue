@@ -45,12 +45,13 @@ export default {
   opacity: 0;
 }
 .router-enter-active, .router-leave-active {
-  transition: opacity .5s ease .2s;
+  transition: opacity .3s ease .2s;
 }
 
 #app {
   font-family: 'Open Sans', sans-serif;
   color: #333;
+  max-width: 955px;
 }
 
 h1, h2 {
