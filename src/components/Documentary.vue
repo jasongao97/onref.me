@@ -51,4 +51,8 @@ img {
   flex-direction: column;
 }
 
+p {
+  text-align: justify;
+}
+
 </style>
