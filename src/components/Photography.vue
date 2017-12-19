@@ -1,8 +1,8 @@
 <template>
-  <div class="hello">
-    <div class="imagesBlock" id="wrapper">
-      <img v-for="image in images" :key="image.id" :src="image.src + 
-      '?imageView2/1/w/600/h/600/q/75|imageslim'"/>
+  <div class="container">
+    <div class="imagesBlock" v-for="image in images" :key="image.id">
+      <img :src="image.src + 
+      '?imageView2/1/w/800/h/800/q/75|imageslim'"/>
     </div>
   </div>
 </template>
@@ -33,27 +33,27 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @media (max-width: 767px) { 
-  .hello {
+  .container {
     margin-top: 30px;
   }
 }
 
 @media (min-width: 768px) { 
-  .hello {
+  .container {
     margin-top: 10px;
     margin-left: 340px;
   }
 }
 
 img {
-  margin-bottom: 40px;
   width: 100%;
-  height: 100%;
+  height: auto;
+  margin: 0;
 }
 
 .imagesBlock {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 0;
 }
 
 </style>

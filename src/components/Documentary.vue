@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="container">
     <h1>Documentary</h1>
     <p>12月6日，中共中央召开党外人士座谈会，征求对经济工作的意见和建议。习近平主持座谈会并发表重要讲话。</p>
     <p>央视网消息：党的十九大报告描绘了中国经济未来发展蓝图。党的十八大以来，以习近平同志为核心的党中央准确把握复杂局势，科学判断，正确决策，真抓实干，引领我国经济取得历史性成就、发生历史性变革。</p>
@@ -28,27 +28,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @media (max-width: 767px) { 
-  .hello {
+  .container {
     margin-top: 30px;
   }
 }
 
 @media (min-width: 768px) { 
-  .hello {
+  .container {
     margin-top: 10px;
     margin-left: 340px;
   }
-}
-
-img {
-  margin-bottom: 40px;
-  width: 100%;
-  height: 100%;
-}
-
-.imagesBlock {
-  display: flex;
-  flex-direction: column;
 }
 
 p {

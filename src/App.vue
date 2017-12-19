@@ -51,7 +51,7 @@ export default {
 #app {
   font-family: 'Open Sans', sans-serif;
   color: #333;
-  max-width: 955px;
+  max-width: 960px;
 }
 
 h1, h2 {
@@ -63,4 +63,5 @@ a {
   text-decoration: none;
   color: #333;
 }
+
 </style>
