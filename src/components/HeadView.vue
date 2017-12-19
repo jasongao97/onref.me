@@ -14,8 +14,8 @@
     </div>
     <div class="navigationBar hidden-xs-only">
       <router-link to="/documentary"><h2 class="navigation">Documentary</h2></router-link>
-      <h2 class="navigation">Information</h2>
-      <h2 class="navigation">About</h2>
+      <router-link to="/information"><h2 class="navigation">Information</h2></router-link>
+      <router-link to="/about"><h2 class="navigation">About</h2></router-link>
     </div>
     <transition name="nav">
       <div v-show="ifShowNav" class="navigationBar hidden-sm-and-up">

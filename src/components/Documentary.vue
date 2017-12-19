@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// import { generateGradient } from '../assets/gradient.js'
 
 export default {
   name: 'Documentary',

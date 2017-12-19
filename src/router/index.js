@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Photography from '@/components/Photography'
 import Documentary from '@/components/Documentary'
+import Information from '@/components/Information'
+import About from '@/components/About'
 
 import 'vue-awesome/icons/bars'
 import Icon from 'vue-awesome/components/Icon'
@@ -21,6 +23,16 @@ export default new Router({
       path: '/documentary',
       name: 'Documentary',
       component: Documentary
+    },
+    {
+      path: '/information',
+      name: 'Information',
+      component: Information
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: About
     }
   ]
 })
