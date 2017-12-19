@@ -39,7 +39,7 @@ export default {
     }
   },
   methods: {
-    showNavigationBar: function (event) {
+    showNavigationBar: function () {
       this.ifShowNav = !this.ifShowNav
     }
   }
@@ -53,7 +53,7 @@ export default {
     font-size: 24pt;
   }
   .subTitle {
-    font-size: 11pt;
+    display: none;
   }
 }
 

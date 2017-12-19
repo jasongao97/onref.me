@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="imagesBlock" v-for="image in images" :key="image.id">
+    <div class="imagesBox" v-for="image in images" :key="image.id">
       <img :src="image.src + 
       '?imageView2/1/w/800/h/800/q/75|imageslim'"/>
     </div>
@@ -47,11 +47,10 @@ export default {
 
 img {
   width: 100%;
-  height: auto;
-  margin: 0;
+  vertical-align: bottom
 }
 
-.imagesBlock {
+.imagesBox {
   margin-bottom: 40px;
   padding: 0;
 }

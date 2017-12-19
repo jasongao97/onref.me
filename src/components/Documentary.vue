@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Documentary</h1>
+    <h1 class="title">Documentary</h1>
     <p>12月6日，中共中央召开党外人士座谈会，征求对经济工作的意见和建议。习近平主持座谈会并发表重要讲话。</p>
     <p>央视网消息：党的十九大报告描绘了中国经济未来发展蓝图。党的十八大以来，以习近平同志为核心的党中央准确把握复杂局势，科学判断，正确决策，真抓实干，引领我国经济取得历史性成就、发生历史性变革。</p>
     <p>习近平总书记强调，现阶段，我国经济发展的基本特征就是由高速增长阶段转向高质量发展阶段。实现高质量发展，是保持经济社会持续健康发展的必然要求，是适应我国社会主要矛盾变化和全面建设社会主义现代化国家的必然要求。随着从高速增长向高质量发展迈进，中国经济正在开启新的时代。</p>
@@ -31,6 +31,9 @@ export default {
   .container {
     margin-top: 30px;
   }
+  .title {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) { 
@@ -38,10 +41,19 @@ export default {
     margin-top: 10px;
     margin-left: 340px;
   }
+  .title {
+    text-align: left;
+  }
+}
+
+.title {
+  font-size: 20pt;
+  font-weight: 700;
 }
 
 p {
   text-align: justify;
+  line-height: 22pt;
 }
 
 </style>
