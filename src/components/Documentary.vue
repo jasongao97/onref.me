@@ -47,7 +47,7 @@ export default {
 
 .title {
   font-size: 20pt;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 p {

@@ -2,7 +2,7 @@
   <div class="top">
     <div class="header">
       <div class="headerTitle">
-        <router-link to="/"><h1 class="title">On Reflection</h1></router-link>
+        <router-link to="/" @click.native="hideNavigationBar"><h1 class="title">On Reflection</h1></router-link>
         <h2 class="subTitle">A project made by 
           <span>{{ msg }}</span>
         </h2>
@@ -12,16 +12,18 @@
         <icon name="bars"></icon>
       </div>
     </div>
+    <!-- 桌面端屏幕导航栏 -->
     <div class="navigationBar hidden-xs-only">
       <router-link to="/documentary"><h2 class="navigation">Documentary</h2></router-link>
       <router-link to="/information"><h2 class="navigation">Information</h2></router-link>
       <router-link to="/about"><h2 class="navigation">About</h2></router-link>
     </div>
+    <!-- 移动端屏幕导航栏 -->
     <transition name="nav">
       <div v-show="ifShowNav" class="navigationBar hidden-sm-and-up">
-        <router-link to="/documentary"><h2 class="navigation">Documentary</h2></router-link>
-        <h2 class="navigation">Information</h2>
-        <h2 class="navigation">About</h2>
+        <router-link to="/documentary" @click.native="hideNavigationBar"><h2 class="navigation">Documentary</h2></router-link>
+        <router-link to="/information" @click.native="hideNavigationBar"><h2 class="navigation">Information</h2></router-link>
+        <router-link to="/about" @click.native="hideNavigationBar"><h2 class="navigation">About</h2></router-link>
       </div>
     </transition>
   </div>
@@ -41,6 +43,9 @@ export default {
   methods: {
     showNavigationBar: function () {
       this.ifShowNav = !this.ifShowNav
+    },
+    hideNavigationBar: function () {
+      this.ifShowNav = false
     }
   }
 }
@@ -70,11 +75,11 @@ export default {
 }
 /* 动画过渡 */
 .nav-enter-active {
-  transition: opacity .5s;
+  transition: opacity .2s;
 }
 
 .nav-leave-active {
-  transition: opacity .3s;
+  transition: opacity .1s;
 }
 
 .nav-enter, .nav-leave-to {
@@ -82,6 +87,7 @@ export default {
 }
 
 .top {
+  z-index: 0;
   width: auto;
   background-color: #fff;
   display: flex;

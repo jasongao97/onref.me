@@ -51,7 +51,7 @@ export default {
 #app {
   font-family: 'Open Sans', sans-serif;
   color: #333;
-  width: 1080px;
+  width: 920px;
 }
 
 h1, h2 {
